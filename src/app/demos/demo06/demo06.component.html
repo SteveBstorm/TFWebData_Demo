@@ -1,0 +1,48 @@
+<h2>Demo 06 - Les Pipes</h2>
+
+<p>
+    Les Pipes (ou filtres) sont des fonctions qui permettent de transformer les données affichées dans la vue. Les pipes
+    sont utilisés pour formater, trier, filtrer ou limiter les données affichées dans la vue.
+</p>
+
+<p>
+    Les pipes sont utilisés dans les expressions d'interpolation ({{ " {{ expression | pipe }}" }}) ou dans les
+    directives de liaison de propriété ([prop]="expression | pipe").
+</p>
+
+<p>
+    Angular fournit un certains nombre de pipes intégrés, tels que : "date", "lowercase", "uppercase", "titlecase",
+    "currency", "decimal", "percent", "async", "json", etc.
+</p>
+
+<p>
+    Il est également possible de créer des pipes personnalisés pour répondre aux besoins spécifiques de l'application.
+</p>
+
+<h3>Exemples :</h3>
+
+<h4>Chaine de caractères</h4>
+
+<p><a href="https://angular.io/api/common/UpperCasePipe" target="_blank">UpperCasePipe</a></p>
+<p><a href="https://angular.io/api/common/LowerCasePipe" target="_blank">LowerCasePipe</a></p>
+<p><a href="https://angular.io/api/common/TitleCasePipe" target="_blank">TitleCasePipe</a></p>
+
+<p>Avant : {{ maVariable1 }}</p>
+<p>{{ maVariable1 | uppercase }}</p>
+<p>{{ maVariable1 | lowercase }}</p>
+<p>{{ maVariable1 | titlecase }}</p>
+
+<h4>Nombres</h4>
+
+<p><a href="https://angular.io/api/common/DecimalPipe" target="_blank">TitleCasePipe</a></p>
+<p>{{ "{{ value_expression | number [ : digitsInfo [ : locale ] ] }}" }}</p>
+<p>minIntegerDigits . minFractionDigits - maxFractionDigits</p>
+
+<p>Avant : {{ maVariable2 }}</p> 
+
+<p>{{ maVariable2 | number : '6.2-2' }}</p>
+<p>{{ maVariable2 | number : '6.2-2' : 'en' }}</p>
+
+<h4>Date</h4>
+
+<p><a href="https://angular.io/api/common/DatePipe" target="_blank">DatePipe</a></p>
