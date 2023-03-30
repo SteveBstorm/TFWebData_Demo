@@ -8,6 +8,8 @@
 <p>Valeur de maVariable1 : {{ maVariable1 }}</p>
 <input type="text" [(ngModel)]="maVariable1">
 
+<input type="text"[value]="maVariable1" (keyup)="changeValue($event)">
+
 <h3>Nombre</h3>
 <p>Valeur de maVariable2 : {{ maVariable2 }}</p>
 <input type="number" [(ngModel)]="maVariable2">

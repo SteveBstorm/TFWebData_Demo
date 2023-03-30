@@ -11,4 +11,8 @@ export class Demo02Component {
   maVariable2: number = 12;
   maVariable3: boolean = false;
 
+  changeValue(event: KeyboardEvent | any): void {
+    this.maVariable1 = event.target.value;
+  }
+
 }
