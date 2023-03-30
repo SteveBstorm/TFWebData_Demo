@@ -13,6 +13,7 @@ import { Demo04Component } from './demos/demo04/demo04.component';
 import { Demo05Component } from './demos/demo05/demo05.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
+import { Exo05Component } from './exercices/exo05/exo05.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +27,12 @@ import { FourofourComponent } from './shared/components/fourofour/fourofour.comp
     Demo05Component,
     NavbarComponent,
     FourofourComponent,
+    Exo05Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
