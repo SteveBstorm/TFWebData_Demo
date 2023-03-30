@@ -1,0 +1,34 @@
+<h2>Demo 03 - Event Binding</h2>
+
+<p>Permet de lier un événement Javascript à une méthode définie dans le TypeScript</p>
+
+<h3>Click Event (cliquez sur les boutons)</h3>
+<p>La valeur du nombre : {{ nombre1 }}</p>
+<button (click)="increase()">+</button> &nbsp;
+<button (click)="decrease()">-</button> &nbsp;
+<button (click)="reset()">Reset</button>
+
+<h3>Mouse Event (survolez sur les boutons)</h3>
+<p>La valeur du nombre : {{ nombre2 }}</p>
+<button (mouseenter)="increase2()">+</button> &nbsp;
+<button (mouseenter)="decrease2()">-</button> &nbsp;
+<button (mouseenter)="reset2()">Reset</button>
+
+<h3>Liste des events binding</h3>
+
+<ul>
+    <li>click = au clic de la souris</li>
+    <li>dblclick = au double clic de la souris</li>
+    <li>submit = à l'envoi d'un formulaire</li>
+    <li>scroll = lors du scroll de l'élément</li>
+    <li>cut = lors du ctrl + x</li>
+    <li>copy = lors du ctrl + c</li>
+    <li>paste = lors du ctrl + v</li>
+    <li>keyup = lors du relâchement d'une touche</li>
+    <li>keypress = lors de l'appui (maintenu) d'une touche</li>
+    <li>keydown = lors de l'appui d'une touche</li>
+    <li>mouseenter = lors de l'entrée de la souris dans l'élément</li>
+    <li>mouseleave = lors de la sortie de la souris dans l'élément</li>
+    <li>mousedown = lors de l'appui de la touche de la souris dans l'élément</li>
+    <li>mouseup = lors du relâchement de la touche de la souris dans l'élément</li>
+</ul>
