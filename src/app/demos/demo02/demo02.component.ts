@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class Demo02Component {
 
   maVariable1: string = "Hello";
+  maVariable2: number = 12;
+  maVariable3: boolean = false;
 
 }
