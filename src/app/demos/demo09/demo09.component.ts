@@ -9,6 +9,10 @@ export class Demo09Component {
 
   isToggled: boolean = true;
 
+  fruits: string[] = ['pomme', 'poire', 'ananas', 'cerise', 'pêche']
+
+  inputValue: string = "";
+
   toggle (): void {
     this.isToggled = !this.isToggled;
   }

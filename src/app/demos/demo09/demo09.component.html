@@ -12,6 +12,8 @@
 
 <ul>
     <li>*ngIf : affiche un élément HTML conditionnellement en fonction d'une expression booléenne.</li>
+    <li>*ngFor : permet de répéter un élément HTML pour chaque élément d'une collection</li>
+    <li>*ngSwitch : permet d'affiher différents éléments en HTML en fonction de la valeur d'une variable</li>
 </ul>
 
 <h3>*ngIf</h3>
@@ -31,3 +33,22 @@
 
 <ng-template #trueblock><div>Le booléen est OK</div></ng-template>
 <ng-template #falseblock><div>Le booléen est KO</div></ng-template>
+
+<h3>*ngFor</h3>
+
+<ul>
+    <li *ngFor="let fruit of fruits; let pair = even; let toto = index; first as isFirst">
+        <span [ngClass]="{classe : pair, first: isFirst}">{{ toto }} - {{ fruit }}</span>
+    </li>
+</ul>
+
+<h3>*ngSwitch</h3>
+
+<input type="text" [(ngModel)]="inputValue">
+
+<div [ngSwitch]="inputValue">
+    <p *ngSwitchCase="1">Pomme</p>
+    <p *ngSwitchCase="2">Poire</p>
+    <p *ngSwitchCase="3">Pêche</p>
+    <p *ngSwitchDefault>Entrez 1, 2 ou 3</p>
+</div>
