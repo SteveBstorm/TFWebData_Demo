@@ -23,6 +23,9 @@ import { SumArrayPipe } from './demos/demo07/pipes/sum-array.pipe';
 import { Exo07Component } from './exercices/exo07/exo07.component';
 import { Exo07dot2Component } from './exercices/exo07dot2/exo07dot2.component';
 import { ChronoPipe } from './exercices/exo07/chrono.pipe';
+import { ToFahrenheitPipe } from './exercices/exo07dot2/to-fahrenheit.pipe';
+import { ToCelsiusPipe } from './exercices/exo07dot2/to-celsius.pipe';
+import { TemperaturePipe } from './exercices/exo07dot2/temperature.pipe';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { ChronoPipe } from './exercices/exo07/chrono.pipe';
     Exo07Component,
     Exo07dot2Component,
     ChronoPipe,
+    ToFahrenheitPipe,
+    ToCelsiusPipe,
+    TemperaturePipe,
   ],
   imports: [
     BrowserModule,

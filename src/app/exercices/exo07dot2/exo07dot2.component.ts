@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class Exo07dot2Component {
 
+  temperature: number = 0;
+
 }

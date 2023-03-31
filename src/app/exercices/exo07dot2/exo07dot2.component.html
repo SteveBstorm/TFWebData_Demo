@@ -11,3 +11,11 @@
 <p>temperature | temperature : 'f'</p>
 
 <hr>
+
+<input type="text" [(ngModel)]="temperature">
+
+<p>{{ temperature }} °C :   {{ temperature | toFahrenheit | number : '1.0-2'  }}</p>
+<p>{{ temperature }} °F : {{ temperature | toCelsius | number : '1.0-2' }}</p>
+
+<p>{{ temperature }} °C : {{ temperature | temperature : 'f' | number : '1.0-2' }}</p>
+<p>{{ temperature }} °F : {{ temperature | temperature : 'c' | number : '1.0-2' }}</p>
