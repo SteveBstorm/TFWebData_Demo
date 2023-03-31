@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Demo08Component {
 
+  // NgStyle
+
   italic: boolean = false;
   bold: boolean = false;
   underline: boolean = false;
@@ -38,6 +40,14 @@ export class Demo08Component {
   switchUnderline() {
     this.underline = !this.underline;
     this.setCurrentStyle();
+  }
+
+  // NgClass
+
+  isActive: boolean = false;
+
+  switchClass () {
+    this.isActive = !this.isActive;
   }
 
 }

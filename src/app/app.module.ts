@@ -27,6 +27,7 @@ import { ToFahrenheitPipe } from './exercices/exo07dot2/to-fahrenheit.pipe';
 import { ToCelsiusPipe } from './exercices/exo07dot2/to-celsius.pipe';
 import { TemperaturePipe } from './exercices/exo07dot2/temperature.pipe';
 import { Demo08Component } from './demos/demo08/demo08.component';
+import { Exo08Component } from './exercices/exo08/exo08.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { Demo08Component } from './demos/demo08/demo08.component';
     ToCelsiusPipe,
     TemperaturePipe,
     Demo08Component,
+    Exo08Component,
   ],
   imports: [
     BrowserModule,

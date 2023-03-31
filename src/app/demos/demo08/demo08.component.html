@@ -17,3 +17,19 @@
 <input type="text" [(ngModel)]="color">
 
 <input type="text" [(ngModel)]="margin">
+
+<h3>NgClass</h3>
+
+<p [ngClass]="{ maClasse: isActive }">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quo recusandae, velit obcaecati quasi, illo nulla, ex voluptatibus consectetur commodi assumenda unde laboriosam! In illum nisi cupiditate iusto consectetur totam!
+</p>
+
+<button (click)="switchClass()">Appliquer la classe 'maClasse'</button>
+
+<h3>NgModel</h3>
+
+<p>
+    Attention, ne pas oublier le FormsModule dans le app.module.ts
+</p>
+
+<p>Voir le ngModel color dans NgStyle</p>
