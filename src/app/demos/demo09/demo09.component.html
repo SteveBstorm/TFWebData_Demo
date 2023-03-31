@@ -1,0 +1,33 @@
+<h2>Demo 09 - Structural Directives</h2>
+
+<p>
+    Les directives structurelles sont utilisées pour manipuler la structure du DOM en fonction des données du composants
+</p>
+
+<p>
+    Elles sont généralement préfixées par le caractère * (astérix) et permettent de créer des éléments conditionnels ou répétitifs dans le template.
+</p>
+
+<p>Il existe plusieurs directives structurelles :</p>
+
+<ul>
+    <li>*ngIf : affiche un élément HTML conditionnellement en fonction d'une expression booléenne.</li>
+</ul>
+
+<h3>*ngIf</h3>
+
+<button (click)="toggle()">Afficher / cacher</button>
+
+<div *ngIf="isToggled; else elseblock">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores vitae eaque corporis, consequuntur sit dolore quibusdam? Autem illo reiciendis eius vero similique! Magni rem reprehenderit culpa. Blanditiis id quidem sit!
+</div>
+
+<ng-template #elseblock>
+    <div>Car le booléen est faux.</div>
+</ng-template>
+
+
+<div *ngIf="isToggled; then trueblock else falseblock"></div>
+
+<ng-template #trueblock><div>Le booléen est OK</div></ng-template>
+<ng-template #falseblock><div>Le booléen est KO</div></ng-template>
