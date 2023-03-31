@@ -38,7 +38,7 @@
 <p>{{ "{{ value_expression | number [ : digitsInfo [ : locale ] ] }}" }}</p>
 <p>minIntegerDigits . minFractionDigits - maxFractionDigits</p>
 
-<p>Avant : {{ maVariable2 }}</p> 
+<p>Avant : {{ maVariable2 }}</p>
 
 <p>{{ maVariable2 | number : '6.2-2' }}</p>
 <p>{{ maVariable2 | number : '6.2-2' : 'en' }}</p>
@@ -46,3 +46,50 @@
 <h4>Date</h4>
 
 <p><a href="https://angular.io/api/common/DatePipe" target="_blank">DatePipe</a></p>
+<p>{{ "{{ value_expression | date [ : format [ : timezone [ : locale ] ] ] }}" }}</p>
+
+<p>Avant : {{ maVariable3 }}</p>
+
+<p>{{ maVariable3 | date }}</p>
+<p>{{ maVariable3 | date : 'dd/MM/yyyy'}}</p>
+<p>{{ maVariable3 | date : 'dd/MM/yyyy à HH:mm:ss'}}</p>
+<p>{{ maVariable3 | date : 'dd/MM/yyyy à HH heure et mm minutes'}}</p>
+<p>{{ maVariable3 | date : 'dd MMMM yyyy' : undefined : 'fr-FR' }}</p>
+
+<p>{{ maVariable3.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) }}</p>
+
+
+<h4>Percent</h4>
+
+<p><a href="https://angular.io/api/common/PercentPipe" target="_blank">PercentPipe</a></p>
+<p>{{ "{{ value_expression | percent [ : digitsInfo [ : locale ] ] }}" }}</p>
+
+<p>Avant : {{ maVariable4 }}</p>
+
+<p>{{ maVariable4 | percent }}</p>
+<p>{{ maVariable4 | percent : '2.1-4' }}</p>
+
+
+<h4>Currency</h4>
+
+<p><a href="https://angular.io/api/common/CurrencyPipe" target="_blank">CurrencyPipe</a></p>
+<p>{{ "{{ value_expression | currency [ : currencyCode [ : display [ : digitsInfo [ : locale ] ] ] ] }}" }}</p>
+
+<p>Avant : {{ maVariable2 }}</p>
+<p>{{ maVariable2 | currency }}</p>
+<p>{{ maVariable2 | currency : 'EUR' }}</p>
+<p>{{ maVariable2 | currency : 'JPY' }}</p>
+<p>{{ maVariable2 | currency : 'EUR' : 'symbol' : '5.2-4' : 'fr' }}</p>
+
+
+<h4>JSON</h4>
+
+<p><a href="https://angular.io/api/common/JsonPipe" target="_blank">JsonPipe</a></p>
+<p>{{ "{{ value_expression | json }}" }}</p>
+
+<p>Avant : {{ maVariable5 }}</p>
+<p>Avant : {{ maVariable6 }}</p>
+
+<p>{{ maVariable5 | json }}</p>
+<p>{{ maVariable6 | json }}</p>
+
