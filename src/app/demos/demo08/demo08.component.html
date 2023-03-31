@@ -1,0 +1,19 @@
+<h2>Demo 08 - Les Components Directives</h2>
+
+<h3>NgStyle</h3>
+
+<p [ngStyle]="currentStyle">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam expedita temporibus debitis atque, ipsum quaerat est ea nam, impedit, reprehenderit possimus quod. Ipsam exercitationem assumenda eius porro nulla quisquam officiis.
+</p>
+
+<button (click)="switchItalic()">Italic</button>
+<button (click)="switchBold()">Bold</button>
+<button (click)="switchUnderline()">Underline</button>
+
+<p [ngStyle]="{ 'color' : color, 'margin': margin }">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores ipsum dolores possimus deserunt unde voluptatibus, ratione illum omnis libero accusamus? Doloremque dolor similique tempore cum sint, in vel veniam laudantium!
+</p>
+
+<input type="text" [(ngModel)]="color">
+
+<input type="text" [(ngModel)]="margin">
