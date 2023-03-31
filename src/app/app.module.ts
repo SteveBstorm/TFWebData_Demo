@@ -15,6 +15,10 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { FourofourComponent } from './shared/components/fourofour/fourofour.component';
 import { Exo05Component } from './exercices/exo05/exo05.component';
 import { Demo06Component } from './demos/demo06/demo06.component';
+import { Demo07Component } from './demos/demo07/demo07.component';
+import { FormatDatePipe } from './shared/pipes/format-date.pipe';
+import { GetByIdPipe } from './demos/demo07/pipes/get-by-id.pipe';
+import { SommePipe } from './demos/demo07/pipes/somme.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { Demo06Component } from './demos/demo06/demo06.component';
     FourofourComponent,
     Exo05Component,
     Demo06Component,
+    Demo07Component,
+    FormatDatePipe,
+    GetByIdPipe,
+    SommePipe,
   ],
   imports: [
     BrowserModule,
