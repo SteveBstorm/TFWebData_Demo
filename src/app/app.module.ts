@@ -19,6 +19,7 @@ import { Demo07Component } from './demos/demo07/demo07.component';
 import { FormatDatePipe } from './shared/pipes/format-date.pipe';
 import { GetByIdPipe } from './demos/demo07/pipes/get-by-id.pipe';
 import { SommePipe } from './demos/demo07/pipes/somme.pipe';
+import { SumArrayPipe } from './demos/demo07/pipes/sum-array.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SommePipe } from './demos/demo07/pipes/somme.pipe';
     FormatDatePipe,
     GetByIdPipe,
     SommePipe,
+    SumArrayPipe,
   ],
   imports: [
     BrowserModule,
