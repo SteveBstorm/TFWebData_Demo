@@ -1,9 +1,23 @@
 <h2>Exercice 08 - Générateur de formes</h2>
 
+<!-- NgStyle -->
 <p>Créer une application qui permet de modifier les propriétés d'un quadrilatère</p>
 <p>Largeur, hauteur, couleur, bordure, ...</p>
 
+<!-- NgClass -->
 <p>Permettre à l'utilisateur de transformer le quadrilatère en cercle.</p>
 
 <hr>
 
+<p>Cercle : <input type="checkbox" [(ngModel)]="isCircle"></p>
+
+<p>Longueur : {{min}} <input type="range" [min]="min" [max]="max" [(ngModel)]="longueur" (ngModelChange)="update()">{{ max }} ({{ longueur }})</p>
+<p>Largeur : {{min}} <input type="range" [min]="min" [max]="max" [(ngModel)]="largeur" (ngModelChange)="update()">{{ max }} ({{ largeur }})</p>
+
+<p>Couleur : <input type="color" [(ngModel)]="couleur" (ngModelChange)="update()"> ({{ couleur }})</p>
+
+<h3>Bordure</h3>
+
+<p>Largeur : 1 <input type="range" min="1" max="10" [(ngModel)]="borderWidth" (ngModelChange)="update()"> 10 ({{ borderWidth }})</p>
+
+<div [ngStyle]="style" [ngClass]="{ circle : isCircle }"></div>
