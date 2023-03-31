@@ -20,6 +20,9 @@ import { FormatDatePipe } from './shared/pipes/format-date.pipe';
 import { GetByIdPipe } from './demos/demo07/pipes/get-by-id.pipe';
 import { SommePipe } from './demos/demo07/pipes/somme.pipe';
 import { SumArrayPipe } from './demos/demo07/pipes/sum-array.pipe';
+import { Exo07Component } from './exercices/exo07/exo07.component';
+import { Exo07dot2Component } from './exercices/exo07dot2/exo07dot2.component';
+import { ChronoPipe } from './exercices/exo07/chrono.pipe';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { SumArrayPipe } from './demos/demo07/pipes/sum-array.pipe';
     GetByIdPipe,
     SommePipe,
     SumArrayPipe,
+    Exo07Component,
+    Exo07dot2Component,
+    ChronoPipe,
   ],
   imports: [
     BrowserModule,

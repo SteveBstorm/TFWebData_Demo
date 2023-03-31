@@ -1,0 +1,13 @@
+<h2>Exercice 07.1 - Le chronomètre (Pipe)</h2>
+<p>Mettre en place un chronomètre</p>
+<p>- 3 Boutons : Start, Pause, Reset (actif/inactif en fonction des besoins)</p>
+<p>- Affichage “xx minutes xx secondes”</p>
+<p>Astuce : cherchez du côté de setInterval() et du string Interpolation de Typescript ;)</p>
+
+<hr>
+
+<p>Temps écoulé : {{ temps | chrono }}</p>
+
+<button (click)="start()" [disabled]="timer">Start</button>
+<button (click)="stop()" [disabled]="!timer">Stop</button>
+<button (click)="reset()" [disabled]="!temps">Reset</button>

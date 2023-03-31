@@ -14,6 +14,8 @@ import { Demo07Component } from './demos/demo07/demo07.component';
 
 import { Exo03Component } from './exercices/exo03/exo03.component';
 import { Exo05Component } from './exercices/exo05/exo05.component';
+import { Exo07Component } from './exercices/exo07/exo07.component';
+import { Exo07dot2Component } from './exercices/exo07dot2/exo07dot2.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -36,6 +38,8 @@ const routes: Routes = [
     path: 'exos', children: [
       { path: 'exo03', component: Exo03Component },
       { path: 'exo05', component: Exo05Component },
+      { path: 'exo07-1', component: Exo07Component },
+      { path: 'exo07-2', component: Exo07dot2Component },
     ]
   },
   
