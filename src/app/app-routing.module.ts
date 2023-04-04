@@ -22,6 +22,7 @@ import { Exo07dot2Component } from './exercices/exo07dot2/exo07dot2.component';
 import { Exo08Component } from './exercices/exo08/exo08.component';
 import { Exo09Component } from './exercices/exo09/exo09.component';
 import { Demo11Component } from './demos/demo11/demo11.component';
+import { Exo10Component } from './exercices/exo10/exo10.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -52,6 +53,7 @@ const routes: Routes = [
       { path: 'exo07-2', component: Exo07dot2Component },
       { path: 'exo08', component: Exo08Component },
       { path: 'exo09', component: Exo09Component },
+      { path: 'exo10', component: Exo10Component },
     ]
   },
   

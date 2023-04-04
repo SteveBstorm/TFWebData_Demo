@@ -36,6 +36,7 @@ import { TraductionDirective } from './demos/demo10/directives/traduction.direct
 import { Demo11Component } from './demos/demo11/demo11.component';
 import { EnfantComponent } from './demos/demo11/enfant/enfant.component';
 import { ReponseComponent } from './demos/demo11/reponse/reponse.component';
+import { Exo10Component } from './exercices/exo10/exo10.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { ReponseComponent } from './demos/demo11/reponse/reponse.component';
     Demo11Component,
     EnfantComponent,
     ReponseComponent,
+    Exo10Component,
   ],
   imports: [
     BrowserModule,
