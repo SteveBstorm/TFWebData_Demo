@@ -30,6 +30,12 @@ import { Demo08Component } from './demos/demo08/demo08.component';
 import { Exo08Component } from './exercices/exo08/exo08.component';
 import { Demo09Component } from './demos/demo09/demo09.component';
 import { Exo09Component } from './exercices/exo09/exo09.component';
+import { Demo10Component } from './demos/demo10/demo10.component';
+import { HighlightDirective } from './demos/demo10/directives/highlight.directive';
+import { TraductionDirective } from './demos/demo10/directives/traduction.directive';
+import { Demo11Component } from './demos/demo11/demo11.component';
+import { EnfantComponent } from './demos/demo11/enfant/enfant.component';
+import { ReponseComponent } from './demos/demo11/reponse/reponse.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +66,12 @@ import { Exo09Component } from './exercices/exo09/exo09.component';
     Exo08Component,
     Demo09Component,
     Exo09Component,
+    Demo10Component,
+    HighlightDirective,
+    TraductionDirective,
+    Demo11Component,
+    EnfantComponent,
+    ReponseComponent,
   ],
   imports: [
     BrowserModule,

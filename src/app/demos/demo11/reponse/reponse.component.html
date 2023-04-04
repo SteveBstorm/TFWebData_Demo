@@ -1,0 +1,6 @@
+<div>
+    <ng-content></ng-content>
+    <input [(ngModel)]="author" type="text" placeholder="Identifiez-vous...">
+    <input [(ngModel)]="content" type="text" placeholder="Votre message...">
+    <button (click)="onSend()">Envoyer!</button>
+</div>

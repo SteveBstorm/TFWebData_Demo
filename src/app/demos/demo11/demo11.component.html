@@ -1,0 +1,7 @@
+<h1>Conversation via message</h1>
+<ul>
+    <li *ngFor="let msg of messages">
+        <app-enfant [message]="msg"></app-enfant>
+    </li>
+</ul>
+<app-reponse (new_message_emitter)="addMessage($event)"><h6>Veuillez répondre à Élèves</h6></app-reponse>
