@@ -45,6 +45,7 @@ import { ToDoListComponent } from './demos/demo12/components/to-do-list/to-do-li
 import { ToDoFormComponent } from './demos/demo12/components/to-do-form/to-do-form.component';
 import { TodoService } from './demos/demo12/services/todo.service';
 import { Exo11Component } from './exercices/exo11/exo11.component';
+import { Exo11ListItemComponent } from './exercices/exo11/components/exo11-list-item/exo11-list-item.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { Exo11Component } from './exercices/exo11/exo11.component';
     ToDoListComponent,
     ToDoFormComponent,
     Exo11Component,
+    Exo11ListItemComponent,
   ],
   imports: [
     BrowserModule,
