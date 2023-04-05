@@ -25,6 +25,7 @@ import { Demo11Component } from './demos/demo11/demo11.component';
 import { Exo10Component } from './exercices/exo10/exo10.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
 import { Exo11Component } from './exercices/exo11/exo11.component';
+import { Demo13Component } from './demos/demo13/demo13.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -43,6 +44,7 @@ const routes: Routes = [
       { path: 'demo10', component: Demo10Component },
       { path: 'demo11', component: Demo11Component },
       { path: 'demo12', component: Demo12Component },
+      { path: 'demo13', component: Demo13Component },
 
 
       { path: '', component: HomeComponent },

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { Demo01Component } from './demos/demo01/demo01.component';
 import { Demo02Component } from './demos/demo02/demo02.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo03Component } from './demos/demo03/demo03.component';
 import { Exo03Component } from './exercices/exo03/exo03.component';
 import { Demo04Component } from './demos/demo04/demo04.component';
@@ -46,6 +46,7 @@ import { ToDoFormComponent } from './demos/demo12/components/to-do-form/to-do-fo
 import { TodoService } from './demos/demo12/services/todo.service';
 import { Exo11Component } from './exercices/exo11/exo11.component';
 import { Exo11ListItemComponent } from './exercices/exo11/components/exo11-list-item/exo11-list-item.component';
+import { Demo13Component } from './demos/demo13/demo13.component';
 
 @NgModule({
   declarations: [
@@ -91,11 +92,13 @@ import { Exo11ListItemComponent } from './exercices/exo11/components/exo11-list-
     ToDoFormComponent,
     Exo11Component,
     Exo11ListItemComponent,
+    Demo13Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

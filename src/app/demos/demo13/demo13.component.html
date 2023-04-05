@@ -1,0 +1,46 @@
+<h1>Formulaire d'inscription :</h1>
+<form [formGroup]="inscription_form" (ngSubmit)="validate_form()">
+    <div>
+        <label for="last_name">Nom de famille :</label>
+        <input formControlName="last_name" id="last_name" type="text">
+        <p *ngIf="inscription_form.controls['last_name'].errors && inscription_form.controls['last_name'].errors['minlength']">Il faut {{inscription_form.controls['last_name'].errors['minlength'].requiredLength}} caractères minimum</p>
+        <p *ngIf="inscription_form.controls['last_name'].errors && inscription_form.controls['last_name'].errors['maxlength']">Il faut {{inscription_form.controls['last_name'].errors['maxlength'].requiredLength}} caractères maximum</p>
+        <p *ngIf="inscription_form.controls['last_name'].errors && inscription_form.controls['last_name'].errors['required'] && inscription_form.controls['last_name'].touched">Ce champs est obligatoire</p>
+    </div>
+    <div>
+        <label for="first_name">Prénom :</label>
+        <input formControlName="first_name" id="first_name" type="text">
+        <p *ngIf="inscription_form.controls['first_name'].errors && inscription_form.controls['first_name'].errors['minlength']">Il faut {{inscription_form.controls['first_name'].errors['minlength'].requiredLength}} caractères minimum</p>
+        <p *ngIf="inscription_form.controls['first_name'].errors && inscription_form.controls['first_name'].errors['maxlength']">Il faut {{inscription_form.controls['first_name'].errors['maxlength'].requiredLength}} caractères maximum</p>
+        <p *ngIf="inscription_form.controls['first_name'].errors && inscription_form.controls['first_name'].errors['required'] && inscription_form.controls['first_name'].touched">Ce champs est obligatoire</p>
+    </div>
+    <div>
+        <label for="email">Adresse e-mail :</label>
+        <input formControlName="email" id="email" type="email">
+        <p *ngIf="inscription_form.controls['email'].errors && inscription_form.controls['email'].errors['minlength']">Il faut {{inscription_form.controls['email'].errors['minlength'].requiredLength}} caractères minimum</p>
+        <p *ngIf="inscription_form.controls['email'].errors && inscription_form.controls['email'].errors['maxlength']">Il faut {{inscription_form.controls['email'].errors['maxlength'].requiredLength}} caractères maximum</p>
+        <p *ngIf="inscription_form.controls['email'].errors && inscription_form.controls['email'].errors['required'] && inscription_form.controls['email'].touched">Ce champs est obligatoire</p>
+    </div>
+    <div>
+        <label for="birthdate">Date de naissance :</label>
+        <input formControlName="birthdate" id="birthdate" type="date">
+        <p *ngIf="inscription_form.controls['birthdate'].errors && inscription_form.controls['birthdate'].errors['isAdult']">{{inscription_form.controls['birthdate'].errors['isAdult'].defaultMessage}}</p>
+        <p *ngIf="inscription_form.controls['birthdate'].errors && inscription_form.controls['birthdate'].errors['required'] && inscription_form.controls['birthdate'].touched">Ce champs est obligatoire</p>
+    </div>
+    <fieldset formArrayName="allergens">
+        <legend>Vos allergènes :</legend>
+        <div>
+            <button type="button" (click)="sub_allergen()">Retirer un allergène</button>
+            <button type="button" (click)="add_allergen()">Ajouter un allergène</button>
+        </div>
+        <div *ngFor="let allergen_control of get_allergens_array().controls; let i = index">
+            <label for="allergen_{{i}}">Allergène n° {{i+1}} :</label>
+            <input type="text" [formControlName]="i">
+            <p *ngIf="allergen_control.errors && allergen_control.errors['minlength']">Il faut {{allergen_control.errors['minlength'].requiredLength}} caractères minimum</p>
+            <p *ngIf="allergen_control.errors && allergen_control.errors['maxlength']">Il faut {{allergen_control.errors['maxlength'].requiredLength}} caractères maximum</p>
+            <p *ngIf="allergen_control.errors && allergen_control.errors['required'] && allergen_control.touched">Ce champs est obligatoire</p>
+        </div>
+    </fieldset>
+    <button type="submit">Inscrire</button>
+    <button type="reset">Remettre à zéro</button>
+</form>
