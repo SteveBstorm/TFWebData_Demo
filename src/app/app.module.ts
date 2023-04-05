@@ -44,6 +44,7 @@ import { Demo12Component } from './demos/demo12/demo12.component';
 import { ToDoListComponent } from './demos/demo12/components/to-do-list/to-do-list.component';
 import { ToDoFormComponent } from './demos/demo12/components/to-do-form/to-do-form.component';
 import { TodoService } from './demos/demo12/services/todo.service';
+import { Exo11Component } from './exercices/exo11/exo11.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import { TodoService } from './demos/demo12/services/todo.service';
     Demo12Component,
     ToDoListComponent,
     ToDoFormComponent,
+    Exo11Component,
   ],
   imports: [
     BrowserModule,

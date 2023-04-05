@@ -1,0 +1,31 @@
+<h2>Exercice 11 - Panier de courses V2</h2>
+
+<p>Créer une application qui permet à l'utilisateur de saisir un nom d'article et une quantité</p>
+<p>L'application doit pouvoir également afficher la liste des articles avec la quantité et la date d'ajout. (formatée)</p>
+
+<p>L'utilisateur peut également supprimer un élément de la liste.</p>
+
+<p>Utilisez le model fournis pour réaliser l'exercice.</p>
+<p>Optimiser la liste de course avec l’utilisation d’un service qui gère la liste et les méthodes qui peuvent s’y appliquer</p>
+<p>Ajouter la possibilité de gérer le nombre d’articles voulu (Ex : Lait x 6, Tomates x 3, …)</p>
+
+<div class="solution">
+    <div>
+        <label for="name_product">Nom produit :</label>
+        <input id="name_product" [(ngModel)]="name_product" type="text">
+    </div>
+    <div>
+        <label for="qty_product">Quantité :</label>
+        <input id="qty_product" [(ngModel)]="qty_product" type="number" min="1">
+    </div>
+    <button (click)="addItem()">Ajouter!</button>
+    <hr>
+    <h2>Liste de courses</h2>
+    <ul *ngIf="panier.length > 0; else errorMessage">
+        <!-- <li *ngFor="let item of panier">{{item.name}} : {{item.qty}} ({{item.dateAdd | date : "dd/MM/yyyy à HH:mm:ss"}})<button (click)="delItem(item)">🚮</button></li> -->
+        <li *ngFor="let item of panier; let i = index">{{item.name}} : <button (click)="lessItem(i)">-</button>{{item.qty}}<button (click)="moreItem(i)">+</button> ({{item.dateAdd | date : "dd/MM/yyyy à HH:mm:ss"}})<button (click)="delItemWithIndex(i)">🚮</button></li>
+    </ul>
+    <ng-template #errorMessage>
+        <p>Il n'y a pas encore d'article, utiliser le fomulaire ci-dessus pour en ajouter!</p>
+    </ng-template>
+</div>
