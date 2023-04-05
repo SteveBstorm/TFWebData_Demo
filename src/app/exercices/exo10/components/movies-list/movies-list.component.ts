@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IMovie } from '../../models/imovie';
+import { ISceanceId } from '../../models/isceance-id';
+import { ISceance } from '../../models/isceance';
 
 @Component({
   selector: 'app-movies-list',
@@ -55,5 +57,13 @@ export class MoviesListComponent {
 
   select_movie(movie : IMovie){
     this.selected_movie = movie;
+  }
+
+  sub_sceance(sceance_id : ISceanceId){
+    let movie : IMovie | undefined = this.movies.find(m => m.title == sceance_id.movie_title);
+    if(!movie) return;
+    let sceance : ISceance | undefined = movie.sceances.find(s => s.num_room == sceance_id.sceance_num && s.date == sceance_id.sceance_date);
+    if(!sceance) return;
+    sceance.nb_seats --;
   }
 }
