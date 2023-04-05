@@ -1,0 +1,11 @@
+div{
+    display: flex;
+}
+
+div>ul{
+    width : 40%
+}
+
+div>app-movie-details{
+    width: 60%;
+}

@@ -37,6 +37,9 @@ import { Demo11Component } from './demos/demo11/demo11.component';
 import { EnfantComponent } from './demos/demo11/enfant/enfant.component';
 import { ReponseComponent } from './demos/demo11/reponse/reponse.component';
 import { Exo10Component } from './exercices/exo10/exo10.component';
+import { MoviesListComponent } from './exercices/exo10/components/movies-list/movies-list.component';
+import { MoviesListItemComponent } from './exercices/exo10/components/movies-list-item/movies-list-item.component';
+import { MovieDetailsComponent } from './exercices/exo10/components/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +77,9 @@ import { Exo10Component } from './exercices/exo10/exo10.component';
     EnfantComponent,
     ReponseComponent,
     Exo10Component,
+    MoviesListComponent,
+    MoviesListItemComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,

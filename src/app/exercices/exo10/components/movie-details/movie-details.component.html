@@ -1,0 +1,11 @@
+<h2>{{movie.title}} - {{movie.duration}} minutes</h2>
+<p>{{movie.description}}</p>
+<img [src]="movie.poster_url">
+<ul>
+    <li *ngFor="let s of movie.sceances">
+        <div>
+            Séance de {{s.date | date:'HH:mm'}} dans la salle {{s.num_room}} :
+            <button (click)="book_seats(s)">Réserver (reste {{s.nb_seats}})</button>
+        </div>
+    </li>
+</ul>

@@ -1,0 +1,9 @@
+<h1>Vos films de ce soir :</h1>
+<div>
+    <ul>
+        <li *ngFor="let m of movies" (click)="select_movie(m)">
+            <app-movies-list-item [movie]="m"></app-movies-list-item>
+        </li>
+    </ul>
+    <app-movie-details *ngIf="selected_movie" [movie]="selected_movie"></app-movie-details>
+</div>
