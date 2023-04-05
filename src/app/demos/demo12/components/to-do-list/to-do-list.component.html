@@ -1,0 +1,10 @@
+<ul *ngIf="list.length > 0; else errorMessage">
+    <li *ngFor="let todo of list">
+        {{todo}}
+    </li>
+</ul>
+<ng-template #errorMessage>
+    <div>
+        <p>Pas encore de tâches enregistrées...</p>
+    </div>
+</ng-template>

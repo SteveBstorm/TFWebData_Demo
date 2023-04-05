@@ -40,6 +40,10 @@ import { Exo10Component } from './exercices/exo10/exo10.component';
 import { MoviesListComponent } from './exercices/exo10/components/movies-list/movies-list.component';
 import { MoviesListItemComponent } from './exercices/exo10/components/movies-list-item/movies-list-item.component';
 import { MovieDetailsComponent } from './exercices/exo10/components/movie-details/movie-details.component';
+import { Demo12Component } from './demos/demo12/demo12.component';
+import { ToDoListComponent } from './demos/demo12/components/to-do-list/to-do-list.component';
+import { ToDoFormComponent } from './demos/demo12/components/to-do-form/to-do-form.component';
+import { TodoService } from './demos/demo12/services/todo.service';
 
 @NgModule({
   declarations: [
@@ -80,6 +84,9 @@ import { MovieDetailsComponent } from './exercices/exo10/components/movie-detail
     MoviesListComponent,
     MoviesListItemComponent,
     MovieDetailsComponent,
+    Demo12Component,
+    ToDoListComponent,
+    ToDoFormComponent,
   ],
   imports: [
     BrowserModule,
