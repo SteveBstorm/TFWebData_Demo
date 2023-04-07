@@ -1,0 +1,11 @@
+<h3>Détail de {{currentPersonne.nickname}}</h3>
+<p>Email : {{currentPersonne.email}}</p>
+<p>Date de naissance : {{currentPersonne.birthdate | date : 'dd-MM-yyyy'}}</p>
+
+<ol>
+  <li *ngFor="let f of currentPersonne.favoritemovie">
+    {{f}}
+  </li>
+</ol>
+
+<button (click)="retour()">Retour</button>

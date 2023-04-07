@@ -50,6 +50,8 @@ import { Demo13Component } from './demos/demo13/demo13.component';
 import { Exo12Component } from './exercices/exo12/exo12.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
 import { CibleComponent } from './demos/demo14/cible/cible.component';
+import { ListeComponent } from './exercices/exo12/liste/liste.component';
+import { DetailComponent } from './exercices/exo12/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +101,8 @@ import { CibleComponent } from './demos/demo14/cible/cible.component';
     Exo12Component,
     Demo14Component,
     CibleComponent,
+    ListeComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

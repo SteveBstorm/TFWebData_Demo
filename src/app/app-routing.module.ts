@@ -1,3 +1,5 @@
+import { DetailComponent } from './exercices/exo12/detail/detail.component';
+import { ListeComponent } from './exercices/exo12/liste/liste.component';
 import { AuthGuard } from './demos/demo14/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -67,6 +69,8 @@ const routes: Routes = [
       { path: 'exo10', component: Exo10Component },
       { path: 'exo11', component: Exo11Component },
       { path: 'exo12', component: Exo12Component },
+      { path: 'listepersonne', component: ListeComponent },
+      { path: 'detail/:index', component: DetailComponent },
     ]
   },
 

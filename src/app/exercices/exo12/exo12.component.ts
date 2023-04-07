@@ -1,3 +1,4 @@
+import { PersonneService } from './personne.service';
 import { CustomsValidatorsService } from './../../demos/demo13/services/customs-validators.service';
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl } from '@angular/forms';
 import { Component } from '@angular/core';
@@ -12,7 +13,8 @@ export class Exo12Component {
   fg! : FormGroup
 
   constructor(private _builder : FormBuilder,
-          private _validators : CustomsValidatorsService
+          private _validators : CustomsValidatorsService,
+          private _personne : PersonneService
     ){}
 
   ngOnInit(){
@@ -37,6 +39,7 @@ export class Exo12Component {
   }
 
   onSubmit() {
+    this._personne.addPersonne(this.fg.value)
     console.log(this.fg.value)
   }
 }

@@ -1,0 +1,6 @@
+<h3>Liste de movieFan</h3>
+<ol>
+  <li *ngFor="let p of listePersonne; let i = index">
+    <a [routerLink]="['/exos/detail', i]">{{p.nickname}}</a>
+  </li>
+</ol>
