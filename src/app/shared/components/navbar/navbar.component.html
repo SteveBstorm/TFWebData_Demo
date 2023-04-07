@@ -20,9 +20,10 @@
                 <li><a routerLink="demos/demo13">Demo 13 - Les formulaires réactifs</a></li>
                 <li><a routerLink="demos/demo14">Demo 14 - Routing & Guard</a></li>
                 <li><a routerLink="demos/cible">Demo 14' - Cible du routing</a></li>
+                <li><a routerLink="demos/demo15">Demo 15 - ConsoApi Pokeapi</a></li>
             </ul>
         </li>
-        <li>
+        <li *ngIf="isConnected">
             <a routerLink="exos">Exercices</a>
             <ul>
                 <li><a routerLink="exos/exo03">Exo 03 - Le chronomètre</a></li>

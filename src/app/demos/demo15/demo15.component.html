@@ -1,0 +1,10 @@
+<p>demo15 works!</p>
+<p *ngIf="isLoading">Chargement en cours ...</p>
+<p>
+  Count : {{pokedex.count}}
+</p>
+<ul>
+  <li *ngFor="let p of pokedex.results">
+    {{p.name}}
+  </li>
+</ul>

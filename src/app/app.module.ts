@@ -52,6 +52,9 @@ import { Demo14Component } from './demos/demo14/demo14.component';
 import { CibleComponent } from './demos/demo14/cible/cible.component';
 import { ListeComponent } from './exercices/exo12/liste/liste.component';
 import { DetailComponent } from './exercices/exo12/detail/detail.component';
+import { Demo15Component } from './demos/demo15/demo15.component';
+
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -103,12 +106,14 @@ import { DetailComponent } from './exercices/exo12/detail/detail.component';
     CibleComponent,
     ListeComponent,
     DetailComponent,
+    Demo15Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

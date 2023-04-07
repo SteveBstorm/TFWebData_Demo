@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { FakeauthService } from './fakeauth.service';
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-demo14',
@@ -13,6 +14,8 @@ export class Demo14Component {
 
   listeArticle! :any[]
 
+  isConnectedSub! : Subscription
+
   constructor(
     private _service : FakeauthService,
     private _router : Router
@@ -20,18 +23,33 @@ export class Demo14Component {
 
   ngOnInit(){
     this.listeArticle = this._service.listeArticle
-    this.isConnected = this._service.isConnected
+    //this.isConnected = JSON.parse(localStorage.getItem('isConnected') ?? 'false')
+    //this.isConnected = this._service.isConnected
+    this.isConnectedSub = this._service.isConnectedSubject.subscribe({
+      next : (data :boolean) => this.isConnected = data,
+      error : () => console.log("erreur"),
+      complete : () => console.log("fin de vie")
+    })
 
   }
+
+  ngOnDetroy() {
+    this.isConnectedSub.unsubscribe()
+
+  }
+
+  annuler() {
+  }
+
   login() {
     this._service.login()
-    this.isConnected = this._service.isConnected
+    //this.isConnected = this._service.isConnected
   }
 
   logout() {
     this._service.logout()
 
-    this.isConnected = this._service.isConnected
-    this._router.navigate(["/demos/demo05"])
+    //this.isConnected = this._service.isConnected
+    //this._router.navigate(["/demos/demo05"])
   }
 }

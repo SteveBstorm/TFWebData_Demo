@@ -1,3 +1,4 @@
+import { PokeResolver } from './demos/demo15/poke.resolver';
 import { DetailComponent } from './exercices/exo12/detail/detail.component';
 import { ListeComponent } from './exercices/exo12/liste/liste.component';
 import { AuthGuard } from './demos/demo14/auth.guard';
@@ -32,6 +33,7 @@ import { Demo13Component } from './demos/demo13/demo13.component';
 import { Exo12Component } from './exercices/exo12/exo12.component';
 import { Demo14Component } from './demos/demo14/demo14.component';
 import { CibleComponent } from './demos/demo14/cible/cible.component';
+import { Demo15Component } from './demos/demo15/demo15.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -52,6 +54,7 @@ const routes: Routes = [
       { path: 'demo12', component: Demo12Component },
       { path: 'demo13', component: Demo13Component },
       { path: 'demo14', component: Demo14Component },
+      { path: 'demo15', resolve : {monPokedex : PokeResolver} , component: Demo15Component },
       { path: 'cible/:index', canActivate : [AuthGuard], component: CibleComponent },
 
 
