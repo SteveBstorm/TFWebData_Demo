@@ -1,0 +1,12 @@
+<h3>
+  Routing & guard
+</h3>
+<p>Etat de connexion : {{isConnected}}</p>
+<button (click)="login()" *ngIf="!isConnected">Connexion</button>
+<button (click)="logout()" *ngIf="isConnected">Déconnexion</button>
+<hr />
+<ul>
+  <li *ngFor="let a of listeArticle; let i = index;">
+   <a [routerLink]="['/demos/cible', i]">{{a.nom}}</a> <!-- http://localhost:4200/demos/cible/1 -->
+  </li>
+</ul>

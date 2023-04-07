@@ -1,0 +1,5 @@
+Ajouter à l'exo 12
+
+1 service pour stocker les personnes enregistrées
+1 Composant pour afficher la liste des personnes
+1 Composant pour afficher le détail d'une personne

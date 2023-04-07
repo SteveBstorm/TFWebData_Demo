@@ -47,6 +47,9 @@ import { TodoService } from './demos/demo12/services/todo.service';
 import { Exo11Component } from './exercices/exo11/exo11.component';
 import { Exo11ListItemComponent } from './exercices/exo11/components/exo11-list-item/exo11-list-item.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
+import { Exo12Component } from './exercices/exo12/exo12.component';
+import { Demo14Component } from './demos/demo14/demo14.component';
+import { CibleComponent } from './demos/demo14/cible/cible.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +96,9 @@ import { Demo13Component } from './demos/demo13/demo13.component';
     Exo11Component,
     Exo11ListItemComponent,
     Demo13Component,
+    Exo12Component,
+    Demo14Component,
+    CibleComponent,
   ],
   imports: [
     BrowserModule,

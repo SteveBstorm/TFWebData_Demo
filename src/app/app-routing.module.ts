@@ -1,3 +1,4 @@
+import { AuthGuard } from './demos/demo14/auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -26,6 +27,9 @@ import { Exo10Component } from './exercices/exo10/exo10.component';
 import { Demo12Component } from './demos/demo12/demo12.component';
 import { Exo11Component } from './exercices/exo11/exo11.component';
 import { Demo13Component } from './demos/demo13/demo13.component';
+import { Exo12Component } from './exercices/exo12/exo12.component';
+import { Demo14Component } from './demos/demo14/demo14.component';
+import { CibleComponent } from './demos/demo14/cible/cible.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -45,6 +49,8 @@ const routes: Routes = [
       { path: 'demo11', component: Demo11Component },
       { path: 'demo12', component: Demo12Component },
       { path: 'demo13', component: Demo13Component },
+      { path: 'demo14', component: Demo14Component },
+      { path: 'cible/:index', canActivate : [AuthGuard], component: CibleComponent },
 
 
       { path: '', component: HomeComponent },
@@ -60,9 +66,10 @@ const routes: Routes = [
       { path: 'exo09', component: Exo09Component },
       { path: 'exo10', component: Exo10Component },
       { path: 'exo11', component: Exo11Component },
+      { path: 'exo12', component: Exo12Component },
     ]
   },
-  
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: FourofourComponent }
 ];
